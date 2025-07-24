@@ -1,1 +1,103 @@
 
+/*** HookMain.cpp ***/
+#include <stdio.h>
+#include <conio.h>
+#include <Windows.h>
+
+#define DEF_DLL_NAME "KeyHook.dll"
+#define DEF_HOOKSTART "HookStart"
+#define DEF_HOOKSTOP "HookStop"
+
+typedef void(*PFN_HOOKSTART)();
+typedef void(*PFN_HOOKSTOP)();
+
+void main() {
+	HMODULE hDll=NULL;
+	PFN_HOOKSTART HookStart=NULL;
+	PFN_HOOKSTOP HookStop=NULL;
+	char ch=0;
+
+	//KeyHook.dll 로딩
+	hDll = LoadLibraryA(DEF_DLL_NAME);
+
+	//export 함수 주소 얻기
+	HookStart = (PFN_HOOKSTART)GetProcAddress(hDll, DEF_HOOKSTART);
+	HookStop = (PFN_HOOKSTOP)GetProcAddress(hDll, DEF_HOOKSTOP);
+
+	//후킹 시작
+	HookStart();
+
+	//'q'가 입력으로 들어올 때까지 대기
+	printf("press 'q' to quit!\n");
+	while(_getch() != 'q');
+
+	//후킹 종료
+	HookStop();
+
+	//KeyHook.dll 언로딩
+	FreeLibrary(hDll);
+}
+
+/*** KeyHook.cpp ***/
+#include <stdio.h>
+#include <Windows.h>
+
+#define DEF_PROCESS_NAME "notepad.exe"
+
+HINSTANCE g_hInstance=NULL;
+HHOOK g_hHook=NULL;
+HWND g_hWnd=NULL;
+
+BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD dwReason, LPVOID lpvReserved) {
+	switch(dwReason) {
+	case DLL_PROCESS_ATTACH:
+		g_hInstance=hinstDLL;
+		break;
+ 
+	case DLL_PROCESS_DETACH:
+		break;
+	}
+ 
+	return TRUE;
+}
+
+LRESULT CALLBACK KeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) {
+	char szPath[MAX_PATH]={0, };
+	char *p=NULL;
+ 
+	if(nCode>=0) {
+		//31-th bit=> press, 1st bit=> release
+		if(!(lParam & 0x80000000)) {
+			//process의 경로를 알아낸다.
+			GetModuleFileNameA(NULL, szPath, MAX_PATH);
+			//경로로부터 프로세스 name 파싱
+			p = strrchr(szPath, '\\');
+
+			//현재 프로세스가 notepad.exe라면,
+			//응용 프로그램으로 메시지를 전달하지 않는다.
+			if(!_stricmp(p+1, DEF_PROCESS_NAME))
+				return 1;
+		}
+	}
+
+	//일반적인 경우에는 CallNextHookEx()를 호출하여
+	//응용 프로그램으로 메세지를 전달한다.
+	return CallNextHookEx(g_hHook, nCode, wParam, lParam);
+}
+
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+	__declspec(dllexport) void HookStart() {
+		g_hHook = SetWindowsHookEx(WH_KEYBOARD, KeyboardProc, g_hInstance, 0);
+	}
+	__declspec(dllexport) void HookStop() {
+		if(g_hHook) {
+			UnhookWindowsHookEx(g_hHook);
+			g_hHook=NULL;
+		}
+	}
+#ifdef __cplusplus
+}
+#endif
