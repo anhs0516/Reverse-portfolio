@@ -18,6 +18,11 @@
 <img width="1429" height="115" alt="image" src="https://github.com/user-attachments/assets/93eac16f-64f1-4ada-8c5f-9763a49f8df3" />
 
 
+생년월일을 잘못 입력하면 alert("Wrong")
+올바른 생년월일을 입력하면 document.write로 페이지에 정답이 쓰여질 것으로 판단됩니다.
+<img width="2012" height="421" alt="image" src="https://github.com/user-attachments/assets/9590a272-372a-49c3-b9a2-d77c521b5af6" />
+
+
 난독화를 시도하였지만, 너무 어렵고 할 수 없어 생년월일이라는 정보를 토대로 BruteForce 무작위 대입을 시도해보려고 합니다
 
 console을 이용하여 
@@ -43,6 +48,7 @@ for (let i = 600101; i<= 991231; i++){
 
 
 ```
+
 문제가 하나 발생했습니다.
 반복문 하나할 때 마다 alert이 발생하여 확인버튼을 지속적으로 눌러줘야하는 문제 확인
 
@@ -50,8 +56,9 @@ for (let i = 600101; i<= 991231; i++){
 
 
 
-이를 해결하기 위해 찾아본 결과
-alert 기능자체 console 로그찍게끔 바꿨습니다.
+
+정확한 생년월일을 찾지 않고 한번만 입력되기만 해도 페이지 값이 변할 것으로 판단되기에 
+alert 기능자체를 console 로그찍게끔 바꿨습니다.
 ```  code
 window.alert = function(msg) {
 	console.log("alert : " , msg);
@@ -84,5 +91,6 @@ for (let i = 600101; i<= 991231; i++){
 ```
 
 
+<img width="2499" height="818" alt="image" src="https://github.com/user-attachments/assets/9cc095a5-7ae6-413d-9c44-0b6f2a87e1f1" />
 
 
