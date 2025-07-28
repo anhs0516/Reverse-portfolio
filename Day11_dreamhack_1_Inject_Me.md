@@ -61,3 +61,7 @@ ex) PathFindFileName(D://reverse//dreamhack//dreamhack.exe);
 ```
 
 
+- strncmp에서 dreamhack.exe 파일이름과 비교하는게 핵심으로 보이며, strncmp는 strcmp와 다르게 "지정한 크기만큼 비교"를 하는 것
+이를 IDA로 확인해보자
+<img width="2041" height="222" alt="image" src="https://github.com/user-attachments/assets/0d4fafef-c6bf-44a0-8ae1-3efbe7eed737" />
+
