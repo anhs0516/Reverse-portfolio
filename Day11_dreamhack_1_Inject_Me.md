@@ -30,22 +30,21 @@ eax 값들을 비교하여 zero flag 값에 따라 점프하거나 점프하지 
 <img width="1408" height="174" alt="image" src="https://github.com/user-attachments/assets/428efee7-16bc-42a9-a713-4bb2ae0b2c8e" />
 
 *** GetModuleFileNameA
+- 현재 실행중인 실행파일의 경로 얻기
 
 ```code
 DWORD GetModuleFileNameA(
-  [in, optional] HMODULE hModule,
-  [out]          LPSTR   lpFilename,
-  [in]           DWORD   nSize
+  [in, optional] HMODULE hModule, // 경로가 요청되는 로드된 모듈에 대한 핸들 , NULL의 경우 GetModuleFileName 현재 프로세스의 실팽 파일 경로를 검색함
+  [out]          LPSTR   lpFilename, // 모듈의 정규화된 경로를 수신하는 버퍼에 대한 포인터
+  [in]           DWORD   nSize // lpFilename 버퍼의 크기
 );
 
 ```
 
 *** PathFindFileNameA
 ```code
-DWORD GetModuleFileNameA(
-  [in, optional] HMODULE hModule,
-  [out]          LPSTR   lpFilename,
-  [in]           DWORD   nSize
+LPCSTR PathFindFileNameA(
+  [in] LPCSTR pszPath // 검색할 경로가 포함된 최대 길이 MAX_PATH null로 끝나는 문자열에 대한 포인터
 );
 ```
 
