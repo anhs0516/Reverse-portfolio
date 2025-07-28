@@ -30,7 +30,8 @@ eax 값들을 비교하여 zero flag 값에 따라 점프하거나 점프하지 
 <img width="1408" height="174" alt="image" src="https://github.com/user-attachments/assets/428efee7-16bc-42a9-a713-4bb2ae0b2c8e" />
 
 *** GetModuleFileNameA
-- 현재 실행중인 실행파일의 경로 얻기
+
+- 현재 실행중인 실행파일의 경로를 구해주는 API 함수, 반환해주는 값은 경로의 길이, 인자는 3개
 
 ```code
 DWORD GetModuleFileNameA(
@@ -40,12 +41,23 @@ DWORD GetModuleFileNameA(
 );
 
 ```
+```
+ex) GetModuleFileName(NULL, Path, 256);
+: Path에 현재 실행되는 프로그램의 FullPath가 넘어옴(예시 : D://reverse//dreamhack//dreamhack.exe)
+
+```
 
 *** PathFindFileNameA
+- 파일 경로에서 파일 이름을 가져오는 API 함수, 반환해주는 값은 파일 이름, 인자는 1개
+
 ```code
 LPCSTR PathFindFileNameA(
   [in] LPCSTR pszPath // 검색할 경로가 포함된 최대 길이 MAX_PATH null로 끝나는 문자열에 대한 포인터
 );
+```
+```
+ex) PathFindFileName(D://reverse//dreamhack//dreamhack.exe);
+: "dreamhack.exe" 반환
 ```
 
 
