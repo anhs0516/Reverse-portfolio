@@ -77,6 +77,6 @@ C에서 LoadLibraryA를 통해 prob_rev.dll 파일을 로드시켜보았다.
 
 
 flag값이 한눈에 보기 쉽게 나오는 것을 보았을 때 정답을 찾았다.. 이는 잘라놓겠습니다
-
+* 주의사항으로는 64비트로 빌드해야 정답이 나온다 32비트로하면 프로그램 실행되자마자 꺼지는 것처럼 보여요
 <img width="178" height="154" alt="image" src="https://github.com/user-attachments/assets/ab9c3c21-dfbb-4fcd-bd53-8a1153a8147e" />
 
