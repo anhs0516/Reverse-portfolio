@@ -27,8 +27,17 @@ gdb를 확인할 때 위 2가지를 한 번 시도해보겠습니다.
 
 우선 해당 code를 보겠습니다.
 
+"dword_40404c" 가 1일때 "1 hour passed"가 출력되는 걸로 봐서 해당 변수는 "hour" 시간을 나타내는 것 같습니다.
+
+반복문을 살펴보았을 때, while(dword_40404c <= 0x2337)은 2337 hex값을 10진수로 변경해보았을 때 8760이고 이는 365일을 시간으로 나타낸 숫자입니다.
+이로써 8760시간 보다 적게 됐을 때  지속적으로 반복문이 진행되겠네요
+
 <img width="559" height="510" alt="image" src="https://github.com/user-attachments/assets/a7668437-2486-43a8-9a47-9c0ffd991e52" />
 
 sub_401196 부분에서 flag 값 나오는 것이 보여 sub_401196 도 확인해보겠습니다.
 
 <img width="474" height="415" alt="image" src="https://github.com/user-attachments/assets/26adfafd-3f0b-4a5d-b7be-856cd421c396" />
+
+우선 gdb로 프로그램 실행을 시켜보고 main 함수 , disassemble을 시도해보려고 했으나 sleep에 의해 진행되지 않아 보이네요.. 
+sleep이 3600초씩 걸려있어서 이를 변경하는 방향으로 가봐야 할 것 같습니다.
+<img width="796" height="279" alt="image" src="https://github.com/user-attachments/assets/849c18bd-4228-4202-ad0c-dd7bb04b4262" />
