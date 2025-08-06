@@ -66,3 +66,12 @@ JA : Jump If Above , 앞에 값이 더 크면 점프
 
 <img width="2044" height="985" alt="image" src="https://github.com/user-attachments/assets/e4985498-23ba-4ee6-b32c-acfa52fcb48f" />
 
+* 코드 변경 후 [Edit] - [Patch Program] - [Apply Patches to input files] 로 patch 해줘야합니다.
+
+이를 진행 후 파일을 다시 gdb로 실행하였으나...
+
+알아볼 수 없는 문자형태가 나와버렸습니다.. 어디가 문제가 된걸까요..
+
+<img width="835" height="104" alt="image" src="https://github.com/user-attachments/assets/239a9b44-3d52-48d4-a6c1-f0e99a4afc4c" />
+
+
