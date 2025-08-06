@@ -64,4 +64,5 @@ JA : Jump If Above , 앞에 값이 더 크면 점프
 방법으로는 Alt + F2라고 하던데 한 번 적용해보겠습니다.
 
 
+<img width="2044" height="985" alt="image" src="https://github.com/user-attachments/assets/e4985498-23ba-4ee6-b32c-acfa52fcb48f" />
 
