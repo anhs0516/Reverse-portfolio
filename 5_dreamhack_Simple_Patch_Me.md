@@ -17,10 +17,14 @@ IDA에서 문자열 검색을 통해 확인해본 값으로
 
 main 내 Graph로 볼 때 아래처럼 이루어져있네요 
 
-생각해볼 것
+----------
+
+#### 크게 봤을 때 문제풀이 방법 
+
 1. jmp 를 변경하기
 2. cmp 비교값을 줄이기
 
+---------
 gdb를 확인할 때 위 2가지를 한 번 시도해보겠습니다.
 
 <img width="1129" height="953" alt="image" src="https://github.com/user-attachments/assets/1307513d-32a7-402e-afdf-e432f8f7e2bf" />
@@ -42,6 +46,9 @@ sub_401196 부분에서 flag 값 나오는 것이 보여 sub_401196 도 확인�
 
 <img width="796" height="279" alt="image" src="https://github.com/user-attachments/assets/849c18bd-4228-4202-ad0c-dd7bb04b4262" />
 
+--------------------------------------
+
+#### 1번째 방법 jmp 변경
 
 위에서 생각해보기로한 1번째 방법인 jmp를 변경해보겠습니다.
 
@@ -73,5 +80,29 @@ JA : Jump If Above , 앞에 값이 더 크면 점프
 알아볼 수 없는 문자형태가 나와버렸습니다.. 어디가 문제가 된걸까요..
 
 <img width="835" height="104" alt="image" src="https://github.com/user-attachments/assets/239a9b44-3d52-48d4-a6c1-f0e99a4afc4c" />
+
+--------------------------
+
+#### 2번째방법 cmp 관련 값 패치
+
+시간을 다 보내지 않아서일까요... 이 방법이 안된다면 2번째 방법으로 넘어가보겠습니다. cmp 비교값을 0으로 만들어보고 혹은 비교대상인 eax 값을 0시간으로 비교하게끔 해보겠습니다.
+
+
+
+
+
+-------------------------
+
+이것도 안되네요... 하 그럼 제가 바꿀 수 있는 부분은 뭐가 있을까요... 뭔가 시간을 다 보내면서 해야될 것 같은데
+그렇게 몇시간 생각해본 후 sleep이 1시간씩 되어 있는데 이걸 바꿔봐야겠다는 생각이 들었습니다.
+
+그럼 시간을 다 보내게 하는 sleep을 변경해보겠습니다...
+
+#### 3번째 방법 sleep 시간 변경
+
+우선 Alt + F2로 패치말고도 아래 그림으로도 할 수 있네요 그 이후 패치적용은 똑같이하면 됩니다.
+
+<img width="552" height="623" alt="image" src="https://github.com/user-attachments/assets/ee5d3d8f-9b95-4dd5-882a-bf28ff1bbc21" />
+
 
 
