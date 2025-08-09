@@ -14,3 +14,6 @@ IDA로 먼저 흐름을 확인해보겠습니다.
 
 flag 관련 특정 문자열이나 main쪽을 보고 정답이라 판단되는 곳이 있는지 확인해볼게요
 
+<img width="666" height="276" alt="image" src="https://github.com/user-attachments/assets/3536280c-7a1d-4633-b960-4973ac3ecb7d" />
+
+"can you see that" 이란 문자열이 뭔가 정답과 연관이 되어 있을 것 같아보여서 살펴보겠습니다.
