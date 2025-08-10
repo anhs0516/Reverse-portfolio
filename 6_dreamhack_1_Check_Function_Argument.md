@@ -57,3 +57,32 @@ patch가 하나도 안됨..
 
 바꼈는데 GDB 오류발생
 <img width="1064" height="436" alt="image" src="https://github.com/user-attachments/assets/65abb895-fdab-45fd-bde2-48ff7d8356a2" />
+
+음.. 잘안바뀌네요
+<img width="1044" height="573" alt="image" src="https://github.com/user-attachments/assets/6c39ab65-7937-47af-b62b-4af8702dfe1f" />
+
+
+
+오오오 드디어 patch를 정상적으로 해냈습니다. 제가 접근한 방향이 맞았네요
+
+<img width="736" height="276" alt="image" src="https://github.com/user-attachments/assets/bf742ae8-3349-43fc-9bc0-a4e475f3a3a6" />
+
+------------------------------------------------------------------
+### 찐 문제해결
+
+우선 제가 의도한 바는 메인코드를 보았을 때, 아래와 같이 실행하는 것인데 4040D0주소에 flag값을 지정하였는데 이를 출력하지 않았다는게 문제입니다.
+
+이 부분을 출력하려고 해서 이부분을 출력함수인 _puts을 시도하려고 하였으나 이게 아니여도 "Can you see that" 부분에서 똑같은 레지스터들을 덮어쓰더라구요
+
+그래서 저는 rax, rdi 덮어쓰여지기 전에 기존에 "Can you see that"을 출력하는 쪽으로 넘어가 flag를 출력하게 변경하면 문제가 해결될거라 생각했습니다.
+<img width="900" height="532" alt="image" src="https://github.com/user-attachments/assets/334628d0-6708-43c6-86d8-764f00a1e530" />
+
+아직 IDA patch가 익숙치 않아 많이 틀렸었네요..
+
+소스코드는 아래와 같이 수정되어 flag 값을 갖고 바로 출력하도록 patch했습니다.
+
+<img width="985" height="516" alt="image" src="https://github.com/user-attachments/assets/b655400e-b1aa-499b-97df-428e474311a3" />
+
+최종 결과값은 아래와 같습니다.
+
+<img width="736" height="276" alt="image" src="https://github.com/user-attachments/assets/bf742ae8-3349-43fc-9bc0-a4e475f3a3a6" />
