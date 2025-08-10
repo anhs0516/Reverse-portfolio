@@ -47,3 +47,13 @@ flag 관련 특정 문자열이나 main쪽을 보고 정답이라 판단되는 �
 call sub_4015E2 -> jmp 0x401621로 중간 부분을 실행하지 않고 바로 이동하여 register 값을 flag로 생각한 값을 출력하게끔 시도
 
 <img width="1546" height="642" alt="image" src="https://github.com/user-attachments/assets/270032c5-d431-4a40-8905-56150ab6c9dc" />
+
+patch하는 방법이 잘못되었나 생각해서 여러개 시도해보겠습니다. 아래는 여러번 시도한 내용입니다.
+
+<img width="1570" height="664" alt="image" src="https://github.com/user-attachments/assets/71276814-a811-4437-96fc-f8a636b2518b" />
+
+patch가 하나도 안됨..
+<img width="1006" height="444" alt="image" src="https://github.com/user-attachments/assets/3a7c2c9d-857a-4177-b661-346482a5c7df" />
+
+바꼈는데 GDB 오류발생
+<img width="1064" height="436" alt="image" src="https://github.com/user-attachments/assets/65abb895-fdab-45fd-bde2-48ff7d8356a2" />
