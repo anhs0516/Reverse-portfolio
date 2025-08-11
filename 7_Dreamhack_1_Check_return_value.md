@@ -28,4 +28,11 @@ flag 관련된 내용들이 보이네요 해당 문자열들을 가진 곳을 �
 
 <img width="457" height="109" alt="image" src="https://github.com/user-attachments/assets/2c95a683-aeab-4235-bc56-063bfce46e41" />
 
+-----------------------------------
+위 코드와 그래프들을 봤을 때에 제가 낸 결론은 flag 값을 출력하기 전에 다른 값으로 변경하는 것이 문제라고 생각합니다.
 
+문제해결방법
+1. 
+2. 
+
+<img width="1039" height="594" alt="image" src="https://github.com/user-attachments/assets/b38ba681-787c-4ab9-b4b9-dcd126acc56c" />
