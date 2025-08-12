@@ -31,8 +31,12 @@ flag 관련된 내용들이 보이네요 해당 문자열들을 가진 곳을 �
 -----------------------------------
 위 코드와 그래프들을 봤을 때에 제가 낸 결론은 flag 값을 출력하기 전에 다른 값으로 변경하는 것이 문제라고 생각합니다.
 
-문제해결방법
-1. 
-2. 
+문제해결방법으로는 지난번에 했던 것과 비슷한 유형으로 flag가 출력되기전에 다른값으로 바뀌어서 출력되는부분이 존재하여 flag값이 보이지 않는 것이 문제라고 생각 
 
+완전 지난번처럼 하려했더니 지난번과는 달리 call sub_40152B에서 어떠한 작업을 수행하여 아래 방법으로는 문제해결이 되지 않음
 <img width="1039" height="594" alt="image" src="https://github.com/user-attachments/assets/b38ba681-787c-4ab9-b4b9-dcd126acc56c" />
+
+call sub_40152B까지 진행 후 그다음 출력하는 내용이 다른것으로 바뀌지 않도록 설정
+
+<img width="1137" height="591" alt="image" src="https://github.com/user-attachments/assets/e3a82402-7843-40da-ad2f-8fd486bfe686" />
+
