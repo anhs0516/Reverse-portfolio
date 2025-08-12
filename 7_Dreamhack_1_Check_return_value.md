@@ -45,3 +45,33 @@ call sub_40152B까지 진행 후 그다음 출력하는 내용이 다른것으�
 다시 차근차근 짚고 넘어가기 위해 sub_40152B 내용을 한 번 살펴보겠습니다.
 
 <img width="1028" height="903" alt="image" src="https://github.com/user-attachments/assets/e4e47fda-d798-46a3-a377-050818ce9f5b" />
+
+우선 sub_40152B에서 실행되는 call들은 아래 내용이에요
+
+각 내용들에서 jle, ja, jb로 설정되어 있어서 flag 값들을 못만들고 있나 생각이 들어 모두 jmp로 항상 넘어가도록 설정해보았습니다.
+
+<img width="126" height="304" alt="image" src="https://github.com/user-attachments/assets/ca9311b2-a8a1-429a-b4c7-b4a5165caea8" />
+
+* 4012B7
+  <img width="1018" height="595" alt="image" src="https://github.com/user-attachments/assets/dedc6609-e153-486d-8840-fbd5d857eb7c" />
+* 40126A
+<img width="1029" height="627" alt="image" src="https://github.com/user-attachments/assets/38ce6693-d515-4b5b-9157-c1aeb411065b" />
+
+* 401301
+<img width="983" height="862" alt="image" src="https://github.com/user-attachments/assets/4dcec8bc-58cd-4c14-9194-319e11d3e652" />
+
+* 401388
+<img width="1113" height="938" alt="image" src="https://github.com/user-attachments/assets/a79c43ed-3bf8-4c6a-aff7-ff22c4c8ffdd" />
+
+* 401444
+<img width="922" height="861" alt="image" src="https://github.com/user-attachments/assets/e1500e76-e578-451e-81a3-dc9edfa01bf9" />
+
+
+
+이를 패치 후 한번 gdb로 실행해볼게요
+<img width="739" height="125" alt="image" src="https://github.com/user-attachments/assets/ce6ec646-4f68-48f2-a586-4b93db4c76a9" />
+
+flag 값들을 출력하지 못하고 있습니다. 문자열을 만드는게 실패했는지 잘 모르겠네요... 아직 많이 부족합니다.. 어셈블리어를 정확히 해석하는 능력도 아직 부족하네요..
+
+<img width="795" height="275" alt="image" src="https://github.com/user-attachments/assets/395e3c35-e02b-49bb-934b-433b727b3d89" />
+
