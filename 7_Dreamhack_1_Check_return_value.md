@@ -69,6 +69,7 @@ call sub_40152B까지 진행 후 그다음 출력하는 내용이 다른것으�
 
 
 이를 패치 후 한번 gdb로 실행해볼게요
+
 <img width="739" height="125" alt="image" src="https://github.com/user-attachments/assets/ce6ec646-4f68-48f2-a586-4b93db4c76a9" />
 
 flag 값들을 출력하지 못하고 있습니다. 문자열을 만드는게 실패했는지 잘 모르겠네요... 아직 많이 부족합니다.. 어셈블리어를 정확히 해석하는 능력도 아직 부족하네요..
