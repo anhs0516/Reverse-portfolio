@@ -40,3 +40,8 @@ call sub_40152B까지 진행 후 그다음 출력하는 내용이 다른것으�
 
 <img width="1137" height="591" alt="image" src="https://github.com/user-attachments/assets/e3a82402-7843-40da-ad2f-8fd486bfe686" />
 
+흐음 문제가 바로 해결되진 않네요 
+
+다시 차근차근 짚고 넘어가기 위해 sub_40152B 내용을 한 번 살펴보겠습니다.
+
+<img width="1028" height="903" alt="image" src="https://github.com/user-attachments/assets/e4e47fda-d798-46a3-a377-050818ce9f5b" />
