@@ -76,3 +76,37 @@ flag 값들을 출력하지 못하고 있습니다. 문자열을 만드는게 �
 
 <img width="795" height="275" alt="image" src="https://github.com/user-attachments/assets/395e3c35-e02b-49bb-934b-433b727b3d89" />
 
+이제까지 제가 생각한 방법은
+1. sub_40152B를 실행하지 않고 넘기는 저번방식으로 진행
+
+※ 그러나, 이번에는 sub_40152B 함수가 비어있는게 아닌 실제로 flag 값들을 만드는 내용으로 판단되어 이 함수는 실행되어야만 하는 부분입니다.
+
+3. 그럼 sub_40152B 실행 후 즉시 값을 출력하는 곳으로 jmp 하자
+
+※ sub_40152B에서 실행한 값을 rax값에 넣지 않고 바로 출력하려고하니 당연히 문제해결이 안되는게 맞습니다... 생각이 짧았습니당..
+
+4. 제가 생각한 결론은 그럼 sub_40152B 실행 후 "I have return the flag" 이 값으로 rax에 덮어쓰는 부분만 없애자라고 생각하여 해당 부분을 nop으로 변경하였습니다.
+
+진행은 아래와 같은 순서로 진행하였습니다.
+
+<img width="424" height="434" alt="image" src="https://github.com/user-attachments/assets/bbeba108-da5e-4100-bf05-6f0f313b493f" />
+
+위 내용을 아래의 값으로 patch 진행
+
+<img width="955" height="578" alt="image" src="https://github.com/user-attachments/assets/68ec7ca7-6c29-4837-8cc0-bebf4968c25f" />
+
+최종 문제해결입니다.. 
+
+<img width="770" height="246" alt="image" src="https://github.com/user-attachments/assets/4a2ea952-cfbf-4169-b679-1362a8161ed8" />
+
+--------------------------------
+
+### 느낀점
+
+아직 많이 부족하다..
+
+Linux GDB도 잘 다루지 못하고 GDB로도 해결할 수 있어 보이는데 GDB로는 해결하지 못했따...
+
+GDB strapped 되어있어 strip 하는법도 찾아봐야 할 것 같음
+
+그리고 다른 사람 문제해결법도 확인해봐야할 듯 합니다 
