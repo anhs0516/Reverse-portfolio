@@ -39,3 +39,18 @@ IDA 좌측편엔 928개의 함수들이 보입니다..
 이를 소스코드로 보면 각 문자열들을 출력하는거말고는 특별히 보이지는 않는 것 같습니다. 각 함수의 지역변수 1개씩을 찾아야하는데 이를 어떻게 찾아야할지부터 확인해봐야겠네요
 
 <img width="532" height="204" alt="image" src="https://github.com/user-attachments/assets/064f5c10-8a87-4cfe-85b5-756977db4f22" />
+
+함수들을 Hex-view를 통해 보았으나, IDA와 GDB만으로는 노가다가 필요해보입니다.
+
+<img width="620" height="979" alt="image" src="https://github.com/user-attachments/assets/6f701e7e-2438-4f3a-ae4c-0a47bf10702b" />
+
+Dreamhack 같은 페이지 내 참조하라고 되어있으니 해당 방법을 우선 익혀보고 진행하도록 하겠습니다.
+
+<img width="1209" height="150" alt="image" src="https://github.com/user-attachments/assets/ce81d555-1ec0-42f5-8191-da2418034d91" />
+
+
+### Ghidra 
+
+기드라란? 미국 국가 안보국(NSA)에서 만들어 오픈 소스로 공개한 역어셈블리어 프레임워크입니다
+
+자세한 내용은 notes쪽에 정리하고 돌아오도록 하겠습니다.
