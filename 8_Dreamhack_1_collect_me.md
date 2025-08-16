@@ -44,13 +44,27 @@ IDA 좌측편엔 928개의 함수들이 보입니다..
 
 <img width="620" height="979" alt="image" src="https://github.com/user-attachments/assets/6f701e7e-2438-4f3a-ae4c-0a47bf10702b" />
 
-Dreamhack 같은 페이지 내 참조하라고 되어있으니 해당 방법을 우선 익혀보고 진행하도록 하겠습니다.
+파이썬을 pwn 이용하여 해당 func의 1byte씩 가져와보도록 하겠습니다.
 
-<img width="1209" height="150" alt="image" src="https://github.com/user-attachments/assets/ce81d555-1ec0-42f5-8191-da2418034d91" />
+``` code
 
+# pip install pwn
 
-### Ghidra 
+from pwn import *
+import re
 
-기드라란? 미국 국가 안보국(NSA)에서 만들어 오픈 소스로 공개한 역어셈블리어 프레임워크입니다
+elf = ELF('./collect_me') # 파일 불러오기
+s = b""  # byte 형식
+for i in range(928):
+    s += elf.read(elf.sym[f'func_{i}']+11, 1) # s += elf.read(elf.sym['func_'+str(i)]+11, 1) func_0~ 927까지의 주소 내 11byte 떨어진 위치에서 1바이트 읽어와서 문자열 붙이기
+s = s.decode() # 문자열 형식으로 변환
+print(s)
+print(re.search(r"DH\{.*?\}", s).group()) 
 
-자세한 내용은 notes쪽에 정리하고 돌아오도록 하겠습니다.
+```
+func의 지역변수는 11byte 떨어진 위치에서 1byte가 있었습니다. 이를 모두 불러오면 아래와 같은 단어들로 이루어져 정답을 찾을 수 있네요
+
+점점 생각할 시간이 많아져 오래 걸리고 어려워지고 있습니다...ㅋㅋ..
+
+<img width="1834" height="112" alt="image" src="https://github.com/user-attachments/assets/d1a7273f-7249-4eda-a02d-dfb607e0d673" />
+
