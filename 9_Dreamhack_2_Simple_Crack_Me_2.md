@@ -43,3 +43,12 @@ IDA를 이용하여 Ctrl+F12 문자열 검색하여 correct 존재를 확인할 
 그랬더니 위와는 다른 결과값이 보여지는 걸 확인할 수 있습니다. IDA 패치를 진행해보겠습니다.
 
 <img width="763" height="127" alt="image" src="https://github.com/user-attachments/assets/03e0290a-0de0-41db-9710-6fcb5d3e9145" />
+
+패치 후 무작정 correct를 띄우게끔 했습니다만... 이걸 띄운다고 해서 flag 값이 나오는게 아니였습니다. 
+
+<img width="774" height="98" alt="image" src="https://github.com/user-attachments/assets/460b5f54-f64a-4fdf-b6c1-1dd82b556648" />
+
+다시 말해 위에서 제가 말한 2가지 방법 모두가 잘못되었고 이는 32자릿수의 글자를 알아내야 하는 즉, 역연산을 해야하는 것 같습니다.
+
+
+역연산을 어떻게 해야할까 고민을 좀 해봐야겠습니다.
