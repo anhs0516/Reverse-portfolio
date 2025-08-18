@@ -51,3 +51,41 @@ IDA를 이용하여 Ctrl+F12 문자열 검색하여 correct 존재를 확인할 
 다시 말해 위에서 제가 말한 2가지 방법 모두가 잘못되었고 이는 32자릿수의 글자를 알아내야 하는 즉, 역연산을 해야하는 것 같습니다.
 
 역연산을 위해 코드를 좀 더 자세히 보겠습니다.
+
+처음 32자리를 비교하는거는 알게 되었고 아래 각 함수마다 연산식이 있을겁니다 확인해보겠습니다.
+
+* 4011EF
+<img width="391" height="243" alt="image" src="https://github.com/user-attachments/assets/638b365c-b5fc-4d00-a12a-7ed21e392590" />
+
+XOR 
+
+* 401263
+<img width="517" height="212" alt="image" src="https://github.com/user-attachments/assets/e3ecf7c6-b57d-40c1-8e1e-37cfefd71029" />
+
+ADD
+
+* 4012B0
+
+<img width="421" height="208" alt="image" src="https://github.com/user-attachments/assets/267289a5-7347-4947-bd9a-ade624d3afaa" />
+
+SUB
+
+를 뜻합니다.
+
+이 위에 식들을 표현하자면 아래와 같습니다 
+
+
+
+이후 collect를 띄우기 전 비교 대상인 if 문을 확인하여 어떤 문자열 값과 비교하는지 확인해보겠습니다.
+
+<img width="409" height="511" alt="image" src="https://github.com/user-attachments/assets/d3ffb329-8e22-4817-894d-9aba5d28769e" />
+
+if문에서 "s2"를 더블 클릭하면 402008 주소값이 나오는 것을 확인할 수 있습니다.
+
+<img width="1078" height="372" alt="image" src="https://github.com/user-attachments/assets/b6edf8cf-5a82-439e-89b9-69d7fb4f2d5d" />
+
+402008 주소를 따라가보면 아래와 같은 데이터들이 나오네요 이를 토대로 역연산을 진행하면 flag 값을 유추할 수 있을 것 같습니다.
+
+<img width="878" height="502" alt="image" src="https://github.com/user-attachments/assets/81f74717-336b-4459-a08c-4252cb30fcc0" />
+
+
