@@ -89,3 +89,35 @@ if문에서 "s2"를 더블 클릭하면 402008 주소값이 나오는 것을 확
 <img width="878" height="502" alt="image" src="https://github.com/user-attachments/assets/81f74717-336b-4459-a08c-4252cb30fcc0" />
 
 
+역연산이 이루어지면 ADD는 SUB로, SUB는 ADD로 진행되기 때문에 진행흐름은 아래와 같습니다.
+
+* 연산 (역연산 전 기존 흐름)
+
+XOR
+ADD
+SUB
+XOR
+SUB
+ADD
+XOR
+
+
+* 역연산 (flag값을 유추하기 위한 역연산)
+
+XOR
+SUB
+ADD
+XOR
+ADD
+SUB
+XOR
+
+위에 순서대로 진행됩니다.
+
+이를 역연산하기 위한 파이썬 코드를 작성해보겠습니다.
+
+```code
+
+
+
+```
