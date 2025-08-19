@@ -94,22 +94,34 @@ if문에서 "s2"를 더블 클릭하면 402008 주소값이 나오는 것을 확
 * 연산 (역연산 전 기존 흐름)
 
 XOR
+
 ADD
+
 SUB
+
 XOR
+
 SUB
+
 ADD
+
 XOR
 
 
 * 역연산 (flag값을 유추하기 위한 역연산)
 
 XOR
+
 SUB
+
 ADD
+
 XOR
+
 ADD
+
 SUB
+
 XOR
 
 위에 순서대로 진행됩니다.
@@ -117,7 +129,46 @@ XOR
 이를 역연산하기 위한 파이썬 코드를 작성해보겠습니다.
 
 ```code
+data = [ 0xf8, 0xe0, 0xe6, 0x9e, 0x7f, 0x32, 0x68, 0x31, 0x05, 0xdc, 0xa1, 0xaa, 0xaa, 0x09, 0xb3, 0xd8, 0x41, 0xf0, 0x36, 0x8c, 0xce, 0xc7, 0xac, 0x66, 0x91, 0x4c, 0x32, 0xff, 0x05, 0xe0, 0xd9, 0x91]
+xor1 = [ 0xde, 0xad, 0xbe, 0xef]
+xor2 = [ 0xef, 0xbe, 0xad, 0xde]
+xor3 = [ 0x11, 0x33, 0x55, 0x77, 0x99, 0xbb, 0xdd]
 
+def XORParam(lists, key):
+    for i in range(0x20):
+        lists[i] ^= key[i % len(key)]
+
+def ADDParam(lists, key):
+    for i in range(0x20):
+        lists[i] = (lists[i] + key) & 0xFF  # +/- 연산 후 1바이트 범위(0~255)로 유지하려고 & 0xff를 사용 C에서 unsigned char x 와 동일
+        
+def SUBParam(lists, key):
+    for i in range(0x20):
+        lists[i] = (lists[i] - key) & 0xFF # +/- 연산 후 1바이트 범위(0~255)로 유지하려고 & 0xff를 사용 C에서 unsigned char x 와 동일
+
+# 역연산으로 기존 진행흐름에서 반대로 진행하며 ADD -> SUB , SUB -> ADD로 진행 단, XOR 는 거꾸로해도 XOR
+lists = data
+XORParam(lists, xor3)
+SUBParam(lists, 0xf3)
+ADDParam(lists, 0x4d)
+XORParam(lists, xor2)
+ADDParam(lists, 0x5a)
+SUBParam(lists, 0x1f)
+XORParam(lists, xor1)
+
+assert len(lists) == 0x20
+print('DH{%s}' %bytes(lists).decode()) # bytes(lists)는 0~255 범위의 정수만 허용
 
 
 ```
+
+<img width="338" height="30" alt="image" src="https://github.com/user-attachments/assets/d34689f0-3773-449d-8b6c-7ddb1280e6ca" />
+
+
+
+--------------------------
+
+### 느낀점
+
+문제 해결에 있어서 플래그값이 출력되는지 안되는지부터 확인할 것 
+IDA Source Code를 보며 역연산 과정을 정확히 분석하여 파이썬 코드로 짜는데에 익숙해져 시간 단축이 필요
