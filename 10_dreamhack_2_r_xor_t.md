@@ -36,4 +36,16 @@ Source Code 로 보면 아래처럼 보이고
 
 <img width="467" height="32" alt="image" src="https://github.com/user-attachments/assets/64e214ab-7a01-460e-91ba-772cd0c0ba50" />
 
-이게머지...ㅋㅋㅋ 한번 머리 좀 굴려보고 올게여..
+위 문자열을 HEX 값으로 변환하면 아래와 같은 값이네요
+
+<img width="645" height="98" alt="image" src="https://github.com/user-attachments/assets/911dfc6d-043b-458d-a09a-b6e87e45dd25" />
+
+```
+
+43 40 71 70 6c 3d 3d 42 70 70 6c 40 3c 3d 70 47
+3c 3e 40 6c 3e 40 42 6c 73 70 3c 40 6c 40 41 41
+72 71 6d 47 72 3d 42 40 41 3e 71 40 40 42 3d 47
+45 73 6d 43 40 41 72 42 6d 41 47 6c 41 3d 40 71
+
+```
+
