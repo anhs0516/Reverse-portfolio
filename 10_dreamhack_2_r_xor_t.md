@@ -32,3 +32,8 @@ Source Code 로 보면 아래처럼 보이고
 
 즉, for문을 지나 모두 연산이 되어야 정답이 나올 수 있기 때문에 각 for문에 대해 역연산이 필요해보여 파이썬을 이용하여 진행해보겠습니다.
 
+이 문자열을 이용하여 역연산을 진행하면 될 것 같네요 
+
+<img width="467" height="32" alt="image" src="https://github.com/user-attachments/assets/64e214ab-7a01-460e-91ba-772cd0c0ba50" />
+
+이게머지...ㅋㅋㅋ 한번 머리 좀 굴려보고 올게여..
