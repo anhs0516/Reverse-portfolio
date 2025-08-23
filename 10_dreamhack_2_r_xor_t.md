@@ -49,6 +49,15 @@ Source Code 로 보면 아래처럼 보이고
 
 ```
 
+하지만 이렇게 매번 변환해서 사용하기엔 힘들 수 있으니 파이썬 코드를 작성할 때 바이트 문자열로 변환하여 사용하도록 하겠습니다.
+```
+result2 = b"C@qpl==Bppl@<=pG<>@l>@Blsp<@l@AArqmGr=B@A>q@@B=GEsmC@ArBmAGlA=@q"
+result2 = list(result2)
+
+
+```
+
+
 아래 코드는 수정중에 있습니다. 
 
 ``` code
