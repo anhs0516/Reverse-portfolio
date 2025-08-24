@@ -2,6 +2,7 @@
 
 <img width="1049" height="298" alt="image" src="https://github.com/user-attachments/assets/d1aaf639-e4f9-44c5-8cc6-141bafc6aaf6" />
 
+출처 : https://dreamhack.io/wargame/challenges/901
 
 ### 문제풀이
 
@@ -48,17 +49,17 @@ Source Code 로 보면 아래처럼 보이고
 45 73 6d 43 40 41 72 42 6d 41 47 6c 41 3d 40 71
 
 ```
+위 hex값을 일일히 입력하면서 현타가 왔습니다...ㅋㅋㅋ 매번 변환해서 사용하기엔 힘들 수 있으니 파이썬 코드를 작성할 때 바이트 문자열로 변환하여 사용하도록 하겠습니다.
 
-하지만 이렇게 매번 변환해서 사용하기엔 힘들 수 있으니 파이썬 코드를 작성할 때 바이트 문자열로 변환하여 사용하도록 하겠습니다.
 ```
+예시)
 result2 = b"C@qpl==Bppl@<=pG<>@l>@Blsp<@l@AArqmGr=B@A>q@@B=GEsmC@ArBmAGlA=@q"
 result2 = list(result2)
 
 
 ```
+아래는 지금까지 위에서 나열한 문자열과 역연산 진행한 최종 코드입니다. 
 
-
-아래 코드는 수정중에 있습니다. 
 
 ``` code
 result_string = b"C@qpl==Bppl@<=pG<>@l>@Blsp<@l@AArqmGr=B@A>q@@B=GEsmC@ArBmAGlA=@q"
@@ -103,3 +104,19 @@ print('DH{%s}' %answer)
 
 ```
 
+### 최종 정답
+
+<img width="913" height="43" alt="image" src="https://github.com/user-attachments/assets/c440cbb5-a927-47a4-8550-208e17e1f3fc" />
+
+
+
+### 느낀점
+
+1. 리버싱하는데에 계속된 파이썬으로 코드를 짜고 있습니다. 파이썬 코드 작성이 더 수월해지도록 이런 문제들을 더 풀어봐야겠어요
+
+
+2. 역연산 과정에서 두번째 부분인 아래 내용을 보고 반복문이 1~62까지만 진행되고 있었습니다. 0번째랑 63번째자리가 뒤집어지는지 아직 이해를 못했습니다. 계속 시도하다가 뒤집기지 않을까하고 문제를 해결했습니다...
+
+   많이 부족하네요 왜그럴까 다른 사람들의 풀이로 남아있으면 꼭 이해하고 넘어가야할 부분입니다.
+
+<img width="809" height="413" alt="image" src="https://github.com/user-attachments/assets/8bf9c8bc-3fbc-43bf-bcdc-73a2d1aa6758" />
