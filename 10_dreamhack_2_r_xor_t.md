@@ -61,36 +61,45 @@ result2 = list(result2)
 아래 코드는 수정중에 있습니다. 
 
 ``` code
-result2 = [ 0x43, 0x40,  0x71,  0x70,  0x6c, 0x3d, 0x3d, 0x42, 0x70, 0x70, 0x6c, 0x40, 0x3c, 0x3d, 0x70, 0x47, 0x3c, 0x3e, 0x40, 0x6c, 0x3e, 0x40, 0x42, 0x6c, 0x73, 0x70, 0x3c, 0x40, 0x6c, 0x40 , 0x41 , 0x41 , 0x72 , 0x71 , 0x6d , 0x47 , 0x72 , 0x3d , 0x42 , 0x40 , 0x41 , 0x3e , 0x71 , 0x40 , 0x40 , 0x42 , 0x3d , 0x47, 0x45 , 0x73 , 0x6d , 0x43 , 0x40 , 0x41 , 0x72 , 0x42 , 0x6d , 0x41 , 0x47 , 0x6c , 0x41 , 0x3d , 0x40 , 0x71]
+result_string = b"C@qpl==Bppl@<=pG<>@l>@Blsp<@l@AArqmGr=B@A>q@@B=GEsmC@ArBmAGlA=@q"
+result_string = list(result_string)
+
+result2 = ""
+
 
 # XOR
-def for3(lists):  
-    for i in range(64):
-         lists[i] ^= 3
+for i in result_string:
+    i = i ^ 3
+    result2 = result2 + chr(i)
+print(result2)
+
 
 # 뒤집기         
-def for2(lists):
-    for i in range(61):
-        lists[i+1] = lists[63-(i+1)]
+
+reverse_result = ""
+result2 = list(result2)
+
+for i in range(64):
+    reverse_result = reverse_result + result2[63-i]
+
+print(reverse_result)
+
+
+string3 = reverse_result
+string3 = list(string3)
+answer = ""
         
 # -13 후 0x7F AND하여 0~127로 표현하기
-def for1(lists):
-    lists[0] = 0x40
-    for i in range(64):
-        lists[i] = (lists[i]-13) & 0x7f
+
+for i in range(len(string3)):
     
+    string3[i] = ord(string3[i]) & 0x7F  # 문자를 ASCII로 변환(ord) 이후 AND 0x7F(=127)로 0~127로만 표현하기 
+    string3[i] = chr(string3[i] - 13)
+    answer += string3[i]
 
 # 역연산으로 기존 진행흐름에서 반대로 진행하며 ADD -> SUB , SUB -> ADD로 진행 단, XOR 는 거꾸로해도 XOR
-lists = result2
-print(len(lists))
 
-for3(lists)
-for2(lists)
-for1(lists)
-
-assert len(lists) == 64
-print(len(lists))
-print('DH{%s}' %bytes(lists).decode()) # bytes(lists)는 0~255 범위의 정수만 허용
+print('DH{%s}' %answer)
 
 ```
 
