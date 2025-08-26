@@ -5,8 +5,50 @@
 
 링크 : https://dreamhack.io/wargame/challenges/235
 
+### 파일 분석
+
+이번 문제에서는 다른 기존 문제들과는 달리 파일 3개로 되어있네요
+
+<img width="648" height="63" alt="image" src="https://github.com/user-attachments/assets/e89d43ec-cd46-4d74-ab95-4324e73cacc2" />
+
+
+1. PEview로 봤을 때, ELF 파일
+
+<img width="1442" height="258" alt="image" src="https://github.com/user-attachments/assets/3bf037ee-e915-4f6d-8669-6724083edd9f" />
+
+2. 파이썬 코드로 작성되어 있는 파이썬 파일
+
+<img width="982" height="473" alt="image" src="https://github.com/user-attachments/assets/637e008b-ea09-457b-92a1-bd0a7144ce8f" />
+
+
+3.enc 확장자
+
+ENC 파일은 특정 소프트웨어에서 생성한 인코딩 또는 암호화된 파일을 나타내는 확장자
+
+
 
 ### 코드 분석
+
+문제와 연관지어 생각해보면, 어떠한 알고리즘으로 이미지 파일을 인코딩하여 enc 확장자로 만들었다.
+
+복호화시켜 원본 이미지를 알아낸 후 이를 imageviewer.py 코드를 이용해서 이미지 보면 문제 해결될 것으로 보입니다.
+
+```code
+
+
+import sys
+
+# pip install pillow
+from PIL import Image
+
+if len(sys.argv) != 2:
+    print(f"python {sys.argv[0]} <secretMessage.raw>")
+else:
+    with open(sys.argv[1], "rb") as f:
+        output = f.read()
+        Image.frombytes("1", (500, 50), output).show()
+
+```
 
 
 
