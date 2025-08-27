@@ -34,7 +34,7 @@ ENC 파일은 특정 소프트웨어에서 생성한 인코딩 또는 암호화�
 복호화시켜 원본 이미지를 알아낸 후 이를 imageviewer.py 코드를 이용해서 이미지 보면 문제 해결될 것으로 보입니다.
 
 
-아래 코드는 간단히 보면 바이너리(raw) 파일을 읽어서 가로 500, 세로 50 크기를 OS 기본 이미지 뷰어로 열어서 화면에 띄우는 것 같습니다. 우선 enc 파일을 푸는게 핵심일 것 같아요 
+아래 코드는 간단히 보면 바이너리(raw) 파일을 읽어서 가로 500, 세로 50 크기를 OS 기본 이미지 뷰어로 열어서 화면에 띄우는 것 같습니다. prob(ELF) 파일 분석과 enc 파일을 푸는게 핵심일 것 같아요 
 ```code
 
 #imageviewer.py
@@ -58,6 +58,19 @@ else:
 
 ### 문제 풀이
 
+* prob 문자열
+
+<img width="635" height="309" alt="image" src="https://github.com/user-attachments/assets/337143b6-5f25-4e65-ae5d-68df71e0c4b6" />
+
+
+* prob main 그래프 view
+
+<img width="330" height="609" alt="image" src="https://github.com/user-attachments/assets/c2fab0cb-1018-4c71-9c65-889cb9364cf3" />
+
+
+* prob main source code
+
+<img width="513" height="239" alt="image" src="https://github.com/user-attachments/assets/8512fe32-2062-49aa-a1c6-610cba3227ee" />
 
 
 
