@@ -72,6 +72,17 @@ else:
 
 <img width="513" height="239" alt="image" src="https://github.com/user-attachments/assets/8512fe32-2062-49aa-a1c6-610cba3227ee" />
 
+위 code에서 fopen을 통해 secretMessage.raw와 secretMessage.enc 파일들을 열어 "sub_7FA" 함수에 들어가네요 
+
+* sub_7FA
+
+이 함수가 어떻게 흘러가는지 확인하는게 매우 중요할 것으로 보입니다.
+
+<img width="437" height="856" alt="image" src="https://github.com/user-attachments/assets/31db9eaa-75e2-4c54-b88f-4b60ca77e648" />
+
+
+
+### 느낀점
 
 
 
