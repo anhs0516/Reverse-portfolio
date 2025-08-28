@@ -81,6 +81,13 @@ else:
 <img width="437" height="856" alt="image" src="https://github.com/user-attachments/assets/31db9eaa-75e2-4c54-b88f-4b60ca77e648" />
 
 
+여기까지 봤을 때 확인할 수 있는 것은 prob 파일은 인코딩해주는 프로그램, secretMessage.enc는 prob로 인코딩하여 생성된 파일, imageviewer.py는 원본 파일(secretMessage.raw)를 실행시켜 이미지를 보는 파이썬 코드인것으로 보입니다.
+
+그렇다면 sub_7FA를 역연산하여 즉, secretMessage.enc 파일을 디코딩하여 secretMessage.raw 원본 이미지 파일을 구해야할 것으로 보입니다. 
+
+
+
+
 
 ### 느낀점
 
