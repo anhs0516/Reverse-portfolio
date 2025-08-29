@@ -129,7 +129,30 @@ a2 : abcc1dd0ee1
 파이썬 코드로 한번 작성해보겠습니다.
 
 ``` code
+수정중~~~
 
+## 1글자씩 읽어서 a2파일에쓰는데 숫자가 나오면 그 전 글자 반복 +1
+
+
+def decoding(a1,a2):
+    with open(a1, 'r') as f:
+        data = f.read()  # 인코딩된 파일 읽어서 리스트형식으로 단어 가져오기
+        char = list(data)
+        
+        char =[c for c in data if c != '\n'] #줄바꿈문자제거
+        
+        
+    for chr in char:
+        if chr.isalpha(): # 알파벳이면 그대로 글자쓰기, 그리고 이전 글자 현재글자로 변경
+            result += chr 
+            prev_chr = chr
+        elif chr.isdigit(): # 숫자이면 이전글자 반복된만큼쓰기
+            for cnt in int(chr):
+                result += prev_chr
+          
+    print(result)
+    
+        
 
 
 
