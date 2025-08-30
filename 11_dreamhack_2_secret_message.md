@@ -134,32 +134,32 @@ a2 : abcc1dd0ee1
 ## 1글자씩 읽어서 a2파일에쓰는데 숫자가 나오면 그 전 글자 반복 +1
 
 
-def decoding(a1,a2):
-    with open(a1, 'r') as f:
-        data = f.read()  # 인코딩된 파일 읽어서 리스트형식으로 단어 가져오기
-        char = list(data)
-        
-        char =[c for c in data if c != '\n'] #줄바꿈문자제거
-        
-        
-    for chr in char:
-        if chr.isalpha(): # 알파벳이면 그대로 글자쓰기, 그리고 이전 글자 현재글자로 변경
-            result += chr 
-            prev_chr = chr
-        elif chr.isdigit(): # 숫자이면 이전글자 반복된만큼쓰기
-            for cnt in int(chr):
-                result += prev_chr
-          
-    print(result)
-    
-        
+def decoding(a1, a2):
+    result = bytearray()
+    with open(a1, 'rb') as a1, open(a2, 'wb') as a2:
+        data = a1.read()
+        prev_chr = ""
 
+        for b in data:
+            if chr(b).isalpha():  # 알파벳이면 저장
+                result.append(b)
+                prev_chr = b
+            elif chr(b).isdigit():  # 숫자면 이전 문자 반복 (해당 숫자만큼)
+                count = int(chr(b))
+                result.extend([prev_chr] * count)
+        print(result)
+        print(len(result))
+        a2.write(result)
+    
+
+
+
+decoding('secretMessage.enc', 'secretMessage.raw')
 
 
 ```
 
-
-
+입력값 : python ???(argv1) ???\secretMessage.raw(argv2)
 
 
 
