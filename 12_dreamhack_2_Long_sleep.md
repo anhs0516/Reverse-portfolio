@@ -24,8 +24,28 @@
 
 IDA 먼저 살펴보겠습니다.
 
+* IDA 문자열
+
+<img width="824" height="371" alt="image" src="https://github.com/user-attachments/assets/1d1784f3-1645-400e-84f5-3c7b3a40b1a6" />
+
+* IDA GraphView
+
+call sub_1411 이후 "Here's your flag: DH{" 문자열이 보이는 걸로 봐서 sub_1411이 중요해보입니다.
+
+<img width="592" height="962" alt="image" src="https://github.com/user-attachments/assets/3589933d-e888-4543-8852-859f18f5dd00" />
+
+* source code
+  sub_1411 함수를 잘 봐야할 것이고 반복문을 보면 DH{32글자}  겠네요
+  
+
+<img width="429" height="251" alt="image" src="https://github.com/user-attachments/assets/2ddb5721-76b5-41d6-822e-bebf888e8acc" />
 
 
+* sub_1411
+
+해당 함수 안에 다양한 함수들을 또 불러오네염...
+
+<img width="447" height="236" alt="image" src="https://github.com/user-attachments/assets/57bf9bad-4be4-436e-ad03-45d8accd2ac8" />
 
 
 ### 문제풀이
