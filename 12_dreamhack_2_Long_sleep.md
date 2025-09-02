@@ -49,7 +49,17 @@ call sub_1411 이후 "Here's your flag: DH{" 문자열이 보이는 걸로 봐�
 
 <img width="447" height="236" alt="image" src="https://github.com/user-attachments/assets/57bf9bad-4be4-436e-ad03-45d8accd2ac8" />
 
+* sub_19F5
+  
+<img width="360" height="267" alt="image" src="https://github.com/user-attachments/assets/00b2aa31-117e-43b2-afd5-5ae037afdcba" />
 
+* sub_1A73
+
+<img width="630" height="307" alt="image" src="https://github.com/user-attachments/assets/2472271a-6e6d-486d-9d15-e3965acd7ef3" />
+
+* sub_1B14
+
+<img width="616" height="864" alt="image" src="https://github.com/user-attachments/assets/4443f6f6-88b6-4e84-9e58-b1f2c6a6b2fc" />
 
 
 
