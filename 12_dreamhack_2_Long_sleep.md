@@ -48,8 +48,11 @@ call sub_1411 이후 "Here's your flag: DH{" 문자열이 보이는 걸로 봐�
 <img width="447" height="236" alt="image" src="https://github.com/user-attachments/assets/57bf9bad-4be4-436e-ad03-45d8accd2ac8" />
 
 
-### 문제풀이
+* 각 함수 분석
 
+
+
+### 문제풀이
 
 
 
