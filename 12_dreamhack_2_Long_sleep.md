@@ -40,7 +40,9 @@ call sub_1411 이후 "Here's your flag: DH{" 문자열이 보이는 걸로 봐�
 
 <img width="429" height="251" alt="image" src="https://github.com/user-attachments/assets/2ddb5721-76b5-41d6-822e-bebf888e8acc" />
 
+* 각 함수 분석
 
+  
 * sub_1411
 
 해당 함수 안에 다양한 함수들을 또 불러오네염...
@@ -48,7 +50,7 @@ call sub_1411 이후 "Here's your flag: DH{" 문자열이 보이는 걸로 봐�
 <img width="447" height="236" alt="image" src="https://github.com/user-attachments/assets/57bf9bad-4be4-436e-ad03-45d8accd2ac8" />
 
 
-* 각 함수 분석
+
 
 
 
