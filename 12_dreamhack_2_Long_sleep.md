@@ -77,6 +77,12 @@ call sub_1411 이후 "Here's your flag: DH{" 문자열이 보이는 걸로 봐�
 
 <img width="1121" height="471" alt="image" src="https://github.com/user-attachments/assets/f5991b9c-696c-4cf0-8362-5dad18d994fa" />
 
+GDB 실행 결과
+
+integrity check 무결성체크에서 걸리는 것 같네요 여기도 건너뛰거나 다른 방법을 찾아야할 것 같습니다.
+
+<img width="1214" height="64" alt="image" src="https://github.com/user-attachments/assets/f1a2afa3-2d3a-482a-a4e3-f0b24e8fb9b0" />
+
 
 
 
