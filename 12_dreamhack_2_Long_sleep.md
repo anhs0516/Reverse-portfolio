@@ -40,8 +40,8 @@ call sub_1411 이후 "Here's your flag: DH{" 문자열이 보이는 걸로 봐�
 
 <img width="429" height="251" alt="image" src="https://github.com/user-attachments/assets/2ddb5721-76b5-41d6-822e-bebf888e8acc" />
 
-* 각 함수 분석
 
+보여지는 함수에 대한 분석
   
 * sub_1411
 
@@ -61,10 +61,20 @@ call sub_1411 이후 "Here's your flag: DH{" 문자열이 보이는 걸로 봐�
 
 <img width="616" height="864" alt="image" src="https://github.com/user-attachments/assets/4443f6f6-88b6-4e84-9e58-b1f2c6a6b2fc" />
 
+보다보니 sub_14D2에 nano sleep이 걸려 있는걸 확인
 
+
+<img width="338" height="644" alt="image" src="https://github.com/user-attachments/assets/4b7aebac-a517-4eef-bca0-9ac0a7e5eb74" />
+
+이 sleep을 건너뛰면 어떨까 생각하여 문제풀이 진행해보겠습니다.
 
 
 ### 문제풀이
+
+1. nano sleep 통해 sleep하는 것을 건너뛰기
+
+
+
 
 
 
