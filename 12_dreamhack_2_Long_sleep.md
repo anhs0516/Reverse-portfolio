@@ -73,7 +73,7 @@ call sub_1411 이후 "Here's your flag: DH{" 문자열이 보이는 걸로 봐�
 
 1. nano sleep 통해 sleep하는 것을 건너뛰기
 
-1536 syscall nanosleep을 nop으로 변경해보겠습니다.
+1536 syscall nanosleep을 nop으로 변경 혹은 시간받아오는 부분을 0으로 시도해보겠습니당
 
 <img width="1121" height="471" alt="image" src="https://github.com/user-attachments/assets/f5991b9c-696c-4cf0-8362-5dad18d994fa" />
 
