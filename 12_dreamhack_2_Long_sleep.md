@@ -83,6 +83,9 @@ integrity check 무결성체크에서 걸리는 것 같네요 여기도 건너�
 
 <img width="1214" height="64" alt="image" src="https://github.com/user-attachments/assets/f1a2afa3-2d3a-482a-a4e3-f0b24e8fb9b0" />
 
+아래 결과값이 없어서 무결성체크에서 걸리는 것 같아요 
+
+<img width="805" height="387" alt="image" src="https://github.com/user-attachments/assets/85d0cc48-7723-49fd-b671-78b2d1782d31" />
 
 
 
