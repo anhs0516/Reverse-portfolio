@@ -88,6 +88,8 @@ integrity check 무결성체크에서 걸리는 것 같네요 여기도 건너�
 <img width="805" height="387" alt="image" src="https://github.com/user-attachments/assets/85d0cc48-7723-49fd-b671-78b2d1782d31" />
 
 
+2. 무결성체크하는 부분 건너뛰기
+
 
 
 
