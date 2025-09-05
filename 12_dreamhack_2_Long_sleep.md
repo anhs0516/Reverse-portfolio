@@ -96,6 +96,9 @@ integrity check 무결성체크에서 걸리는 것 같네요 여기도 건너�
 ### 결과
 
 
+<img width="928" height="110" alt="image" src="https://github.com/user-attachments/assets/9fe97ad1-361a-451c-bf39-f434c03ad9e3" />
+
+
 
 
 ### 느낀점
