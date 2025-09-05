@@ -89,7 +89,14 @@ integrity check 무결성체크에서 걸리는 것 같네요 여기도 건너�
 
 
 2. 무결성체크하는 부분 건너뛰기
+ 
+기존 무결성 체크하는 부분을 들리지 않고 바로 점프로 변경하였습니다. 
 
+이를 통해 긴 시간동안의 sleep에 들어가지 않고 변경 여부를 확인하는 부분 또한 건너뛰어 정상적으로 DH{}값이 나올 것으로 예상됩니다.
+
+<img width="927" height="805" alt="image" src="https://github.com/user-attachments/assets/8d2a4425-9156-4eb5-afc3-45a94b0a5c4d" />
+
+<img width="494" height="613" alt="image" src="https://github.com/user-attachments/assets/85f6b471-932d-45df-ace2-3c1495012494" />
 
 
 
@@ -97,6 +104,7 @@ integrity check 무결성체크에서 걸리는 것 같네요 여기도 건너�
 
 ### 결과
 
+nano sleep과 무결성체크 건너뛰기로 문제해결한 모습입니다.
 
 <img width="928" height="110" alt="image" src="https://github.com/user-attachments/assets/9fe97ad1-361a-451c-bf39-f434c03ad9e3" />
 
@@ -104,3 +112,10 @@ integrity check 무결성체크에서 걸리는 것 같네요 여기도 건너�
 
 
 ### 느낀점
+
+이번 문제는 지난번 문제보다는 좀 쉬었다고 생각이 드네요 제가 실력이 늘고 있는걸까요 ㅎㅎ
+
+아직도 많이 부족합니다. 좀 더 문제파악 시간을 줄이고 다양한 방법으로 문제를 풀어봐야겠습니다. 
+
+다른 사람들이 어떻게 풀었는지 문제풀이들을 살펴보고 넘어가겠습니다. 
+
