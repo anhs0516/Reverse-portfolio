@@ -99,6 +99,9 @@ integrity check 무결성체크에서 걸리는 것 같네요 여기도 건너�
 <img width="494" height="613" alt="image" src="https://github.com/user-attachments/assets/85f6b471-932d-45df-ace2-3c1495012494" />
 
 
+* 그 외 방법
+
+1. 다른 방법으로는 gdb를 이용하여 실행 중 nanosleep 이전에 브레이크포인트를 걸고 rax 값을 0으로 변경하면 nano sleep이 0초로 될 수도 있겠네요
 
 
 
