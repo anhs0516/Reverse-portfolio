@@ -14,6 +14,8 @@
 
 * out.txt파일
 
+암호화된 flag 값을 복호화하는 문제로 아래 두 값들이 사용될 것으로 보입니다.
+
 <img width="1379" height="419" alt="image" src="https://github.com/user-attachments/assets/1268c200-d0a7-4717-80d0-478a106911d9" />
 
 * out.bin 파일
