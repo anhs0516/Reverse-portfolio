@@ -17,6 +17,7 @@
 <img width="1379" height="419" alt="image" src="https://github.com/user-attachments/assets/1268c200-d0a7-4717-80d0-478a106911d9" />
 
 * out.bin 파일
+  
 해당 파일은 bin 파일이네요
 
 <img width="1329" height="49" alt="image" src="https://github.com/user-attachments/assets/529bdf73-19a1-4c46-8196-e4aff3e3d67e" />
@@ -24,7 +25,7 @@
 
 * public 파일
 
-- 해당 파일은 ELF 매직넘버가 보이는걸로 봐서 ELF 파일인 것 같습니다 이 파일을 먼저 분석해봐야할 것 같아요 
+해당 파일은 ELF 매직넘버가 보이는걸로 봐서 ELF 파일인 것 같습니다 이 파일을 먼저 분석해봐야할 것 같아요 
 <img width="1763" height="572" alt="image" src="https://github.com/user-attachments/assets/641e26ca-21c8-43d6-ac1a-39ad0a56b81d" />
 
 
