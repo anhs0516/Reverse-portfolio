@@ -28,6 +28,12 @@
 <img width="1763" height="572" alt="image" src="https://github.com/user-attachments/assets/641e26ca-21c8-43d6-ac1a-39ad0a56b81d" />
 
 
+IDA로 열어 문자열들을 보니 아래와 같습니다.
+
+<img width="464" height="451" alt="image" src="https://github.com/user-attachments/assets/fdbbfdc5-6df9-44ae-a550-4e58c79490a2" />
+
+
+
 
 
 
