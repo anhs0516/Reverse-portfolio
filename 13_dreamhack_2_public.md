@@ -35,7 +35,7 @@ IDA로 열어 문자열들을 보니 아래와 같습니다.
 
 <img width="464" height="451" alt="image" src="https://github.com/user-attachments/assets/fdbbfdc5-6df9-44ae-a550-4e58c79490a2" />
 
-
+이번 문제는 그래프도 매우 길고 코드도 기네요... 어려운 문제같아요 오랜만에 하니 처음보는거같네요 ㅠ
 
 
 
