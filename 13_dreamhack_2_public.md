@@ -37,6 +37,57 @@ IDA로 열어 문자열들을 보니 아래와 같습니다.
 
 이번 문제는 그래프도 매우 길고 코드도 기네요... 어려운 문제같아요 오랜만에 하니 처음보는거같네요 ㅠ
 
+* Main 함수
+
+```main
+
+v46 = __readfsqword(0x28u);
+  v10 = 0LL;
+### n.txt. 파일을 열음
+  stream = fopen("n.txt", "r");
+### v5, v6 값을 받아옴
+  __isoc99_fscanf(stream, "%llu %llu", &v5, &v6);
+  fclose(stream);
+  while ( v10 <= 0xFCFCFCFC )
+  {
+### sub_12FE 를 통해 v10 값 생성
+    v8 = sub_12FE(v5);
+    v9 = sub_12FE(v8 + 128);
+    v10 = v9 * v8;
+  }
+### n1 = v10 출력 이는 v5 값을 바탕으로 생성됨
+  printf("n1 = %llu\n", v10);
+  v11 = v6;
+  v13 = (v8 - 1) * (v9 - 1);
+  while ( v11 < v13 && sub_1249(v11, v13) != 1 )
+    ++v11;
+### n2 = v11 출력 이는 v6 값을 바탕으로 생성됨 
+  printf("n2 = %llu\n", v11);
+  *(_QWORD *)s = 0LL;
+
+  v15 ~ v45 = 0LL;
+### flag.txt 파일 읽어 s 값을 가져옴 이는 길이가 3이 아니여야 함
+  stream = fopen("flag.txt", "rb");
+  __isoc99_fscanf(stream, "%255s", s);
+  fclose(stream);
+  if ( (strlen(s) & 3) != 0 )
+  {
+    puts("invalid length!");
+    exit(-1);
+  }
+### out.bin에 저장하는데 sub_1289를 통해 얻은 값을 저장함
+  stream = fopen("out.bin", "wb");
+  for ( i = 0; i < strlen(s) >> 2; ++i )
+  {
+    ptr = sub_1289(*(unsigned int *)&s[4 * i], v11, v10);
+    fwrite(&ptr, 8uLL, 1uLL, stream);
+  }
+  fclose(stream);
+  return 0LL;
+}
+
+```
+
 
 
 ## 문제풀이 
