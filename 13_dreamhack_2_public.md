@@ -16,7 +16,7 @@
 
 암호화된 flag 값을 복호화하는 문제로 아래 두 값들이 사용될 것으로 보입니다.
 
-<img width="1379" height="419" alt="image" src="https://github.com/user-attachments/assets/1268c200-d0a7-4717-80d0-478a106911d9" />
+<img width="688" height="198" alt="image" src="https://github.com/user-attachments/assets/e3b9dc90-8570-4856-b781-f5d92da50cfd" />
 
 * out.bin 파일
   
@@ -115,7 +115,31 @@ v4 = a1 * v4 % a3;
 ```
 
 
+* sub_12FE
+
+```
+unsigned __int64 __fastcall sub_12FE(unsigned __int64 a1)
+{
+  unsigned __int64 i; // [rsp+10h] [rbp-8h]
+
+  while ( 1 )
+  {
+    for ( i = 2LL; a1 >= i * i && a1 % i; ++i )
+      ;
+    if ( a1 < i * i )
+      break;
+    ++a1;
+  }
+  return a1;
+}
+
+``` 
+
+
+
 ## 문제풀이 
+
+out.txt에 주어진 n1과 n2 값을 이용해서 복호화하여 
 
 
 
