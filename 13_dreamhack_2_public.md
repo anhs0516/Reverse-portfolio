@@ -90,6 +90,29 @@ v46 = __readfsqword(0x28u);
 
 ```
 
+* sub_1289
+
+```
+__int64 __fastcall sub_1289(__int64 a1, unsigned __int64 a2, unsigned __int64 a3)
+{
+  __int64 v4; // [rsp+20h] [rbp-10h]
+  unsigned __int64 v5; // [rsp+20h] [rbp-10h]
+  unsigned __int64 i; // [rsp+28h] [rbp-8h]
+
+  if ( !a3 )
+    exit(-1);
+  v4 = 1LL;
+  for ( i = 0LL; i < a2; ++i )
+  {
+    v5 = a1 * v4;
+    v4 = v5 % a3;
+### 쉽게작성하면 위 내용은 아래와 같아요 아래 내용을 a2번 반복
+v4 = a1 * v4 % a3;
+  }
+  return v4;
+}
+
+```
 
 
 ## 문제풀이 
