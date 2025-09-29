@@ -22,6 +22,8 @@
   
 해당 파일은 bin 파일이네요
 
+이 파일은 이미 암호화가 되어 있나봐요 특정 단어가 한눈에 보이지 않네요
+
 <img width="1329" height="49" alt="image" src="https://github.com/user-attachments/assets/529bdf73-19a1-4c46-8196-e4aff3e3d67e" />
 
 
@@ -142,9 +144,6 @@ unsigned __int64 __fastcall sub_12FE(unsigned __int64 a1)
 main 함수 중간에 flag.txt을 열어 값을 저장하는데 v10과 v10값을 encode 함수를 통해 변환 후 out.bin에 저장
 
 문제 해결을 위해선 암호화되어 나오는 값인 out.txt에 주어진 n1과 n2 값을 역으로 거슬러 올라가 즉, 이를 복호화하여 flag 값을 찾아내는게 문제푸는 방법인 것 같습니다.
-
-out.bin 내용도 확인해봐야할 것 같습니다. 
-
 
 
 
