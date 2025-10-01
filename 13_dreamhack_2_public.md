@@ -141,14 +141,24 @@ unsigned __int64 __fastcall sub_12FE(unsigned __int64 a1)
 
 ## 문제풀이 
 
-main 함수 중간에 flag.txt을 열어 값을 저장하는데 v10과 v10값을 encode 함수를 통해 변환 후 out.bin에 저장
+우선 outbin 내용에 뭐가 들어갔는지 읽어보겠습니다. 
 
-문제 해결을 위해선 암호화되어 나오는 값인 out.txt에 주어진 n1과 n2 값을 역으로 거슬러 올라가 즉, 이를 복호화하여 flag 값을 찾아내는게 문제푸는 방법인 것 같습니다.
+암호화를 거쳐서 아래값들로 저장되었을 것 같습니다. 이 결과값을 복호화시키면 flag값이 보일 것 같습니다.
+
+```code
+with open("D:\\2025\\Reversing_C\\dreamhack_reverse\\2_public\\out.bin", "rb") as f:
+    data = f.read()
+    print(data)
+
+결과값
+b'@\xe1\xdc\xd4\x00\x00\x00\x00\xe2\xdf\x83\xa1\x00\x00\x00\x00\x06\xe3c\xc3\x00\x00\x00\x00h\xe2\xd2\xf9\x00\x00\x00\x00\t$\x1a\xc4\x00\x00\x00\x00\xfb\xc0\x9b*\x00\x00\x00\x00\xb5"N\x9a\x00\x00\x00\x00\x9a\xef8}\x00\x00\x00\x00\x9f\x92_\xb1\x00\x00\x00\x00\xef{\xd6\x9e\x00\x00\x00\x00\xe7\xea\xcd\x99\x00\x00\x00\x00'
+```
+
+우선 문제풀이 중에 도저히 잘 모르겠어서 Dreamhack의 댓글을 보았는데 "RSA 알면 ㄹㅇ 쉬움" 이라는 답변을 보고 아래 코드를 보니 (p-1)*(q-1)이 바로 보이네요 
+
+이걸보니 RSA 암호화가 걸려있는 것 같아요 이제 문제의 흐름이 조금이나마 확인되네요
 
 ```
-v4 = a1 * v4 % a3 를 a2번 반복?
-RSA?
-
  while ( v10 <= 0xFCFCFCFC )
   {
 ### sub_12FE 를 통해 v10 값 생성
@@ -168,6 +178,11 @@ RSA?
 
   v15 ~ v45 = 0LL;
 ```
+
+그럼 소수값 두개를 찾아야하는데 
+
+
+
 
 ## 정리
 
