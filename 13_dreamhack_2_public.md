@@ -225,16 +225,49 @@ RSA 복호화의 핵심 계산으로 변환된 숫자 s를 복호화 키인 d로
 
 d = pow(e, -1, phi(n))
 
-이제 위 내용들을 가지고 코드를 짜보겠습니다.
-
-
-
-
+이제 위 내용들을 가지고 정리 부분에 코드를 짜보겠습니다.
 
 
 
 ## 정리
 
+``` code
+from sympy import factorint
+
+# 소인수분해해서 n1의 두 개의 소수 찾기
+# dictionary
+n_dic = factorint(4271010253)
+
+# list로 변환
+n_list = list(n_dic.keys())
+
+
+with open("D:\\2025\\Reversing_C\\dreamhack_reverse\\2_public\\out.bin", "rb") as f:
+    data = f.read()
+    print(data)
+    n = 4271010253
+    p = n_list[0] # 65287
+    q = n_list[1] # 65419
+    phi_n = (p-1)*(q-1)
+    e = 201326609
+    d = pow(e, -1, phi_n)
+    
+    flag =b""
+    
+    sb = list(data)
+    print(sb)
+        
+    
+    for i in range(len(data)//8): #8byte == 64bit
+        s = int.from_bytes(data[i*8:i*8+8], 'little')
+        print(s)
+        flag += (pow(s,d,n)).to_bytes(4, 'little')
+        
+    
+    
+    print(flag)
+
+```
 
 
 
