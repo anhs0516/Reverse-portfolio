@@ -269,6 +269,9 @@ with open("D:\\2025\\Reversing_C\\dreamhack_reverse\\2_public\\out.bin", "rb") a
 
 ```
 
+왜 8바이트씩 잘랐는가?
+
+왜 4바이트씩 읽어들이는가?
 
 
 ## 느낀점
