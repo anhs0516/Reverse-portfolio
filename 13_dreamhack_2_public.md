@@ -231,6 +231,8 @@ d = pow(e, -1, phi(n))
 
 ## 정리
 
+최종적으로 아래 코드를 이용하여 문제 해결 및 정답을 확인할 수 있습니다.
+
 ``` code
 from sympy import factorint
 
@@ -268,6 +270,7 @@ with open("D:\\2025\\Reversing_C\\dreamhack_reverse\\2_public\\out.bin", "rb") a
     print(flag)
 
 ```
+
 
 문제를 풀다가 생긴 궁금증
 
