@@ -13,6 +13,10 @@
 
 PEView로 보았을 때 ELF 형식으로 리눅스에서 실행해보겠습니다.
 
+<img width="785" height="94" alt="image" src="https://github.com/user-attachments/assets/a2e26e48-a96a-4678-b0bf-6bc31725f07c" />
+
+여기서 랜덤한 시간동안 sleep 되어있는것처럼 보이네요
+
 
 문제를 읽어보았을 때, 정답은 68자리나 되는 것 같습니다. 나머지는 바로 유추되는게 없어서 IDA를 통해 문제를 보겠습니다.
 
