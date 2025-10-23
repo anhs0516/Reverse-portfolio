@@ -26,6 +26,7 @@ PEView로 보았을 때 ELF 형식으로 리눅스에서 실행해보겠습니�
 <img width="618" height="622" alt="image" src="https://github.com/user-attachments/assets/79390821-e5d5-49db-bad5-3f3dde7278f4" />
 
 
+Sleep도 보이고, if문 여러개가 보입니다. if문에 따라 DH Flag 값이 28자와 36자를 얻을 수 있는것으로 보입니다. 문제풀이로 가볼게요
 
 
 
