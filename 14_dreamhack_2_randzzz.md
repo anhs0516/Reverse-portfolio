@@ -41,6 +41,11 @@ Sleep도 보이고, if문 여러개가 보입니다. if문에 따라 DH Flag 값
 둘째, GDB에서 실행 중 register 값을 변환하여 시간 조절하여 sleep을 빠져나오는 방법
 
 매번 실행하면서 진행하여야 하니 첫번째 방법으로 IDA에서 변환해주겠습니다.
+
+아래의 Sleep 부분을 nop으로 변환해보겠습니다.
+
+<img width="950" height="621" alt="image" src="https://github.com/user-attachments/assets/6344aeca-e676-4d1b-9256-fffaa38ce625" />
+
    
 2. if 문 두개를 거쳐 flag 값 얻어내기 
 
