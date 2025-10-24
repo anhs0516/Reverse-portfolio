@@ -45,9 +45,11 @@ Sleep도 보이고, if문 여러개가 보입니다. if문에 따라 DH Flag 값
 아래의 Sleep 부분을 nop으로 변환해보겠습니다.
 
 변환 전
+
 <img width="950" height="621" alt="image" src="https://github.com/user-attachments/assets/6344aeca-e676-4d1b-9256-fffaa38ce625" />
 
 변환 후
+
 <img width="973" height="641" alt="image" src="https://github.com/user-attachments/assets/8f2b5972-427f-4edb-998c-bf7947c038ae" />
 
    
