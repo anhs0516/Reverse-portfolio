@@ -52,6 +52,10 @@ Sleep도 보이고, if문 여러개가 보입니다. if문에 따라 DH Flag 값
 
 <img width="973" height="641" alt="image" src="https://github.com/user-attachments/assets/8f2b5972-427f-4edb-998c-bf7947c038ae" />
 
+IDA에서 Sleep 을 모두 nop으로 변환하여 바로 아래처럼 값을 입력하는 부분이 보이는것을 확인할 수 있습니다..
+
+<img width="776" height="97" alt="image" src="https://github.com/user-attachments/assets/3623bcea-2692-4887-ba8e-6c00402ad783" />
+
    
 2. if 문 두개를 거쳐 flag 값 얻어내기 
 
