@@ -67,9 +67,11 @@ num에 알맞은 숫자를 넣으면 플래그가 보이는 것으로 보이는�
 
 아래는 처음 if문에 접근하는 곳입니다.
 
+여기에 접근할 때 내가 어느 값을 입력했고, 어느 값이 입력되었을 때 if문 통과하는지 확인할 수 있을 것 같아요
+
 <img width="548" height="168" alt="image" src="https://github.com/user-attachments/assets/7641e64b-e4e7-4df7-854d-1a73e6b8b54d" />
 
-여기가 
+
 
 <img width="708" height="712" alt="image" src="https://github.com/user-attachments/assets/fead2b7b-8135-4f8a-be35-88eaa87c6bdd" />
 
