@@ -65,6 +65,13 @@ num에 알맞은 숫자를 넣으면 플래그가 보이는 것으로 보이는�
 
 모두를 넣을 순 없으니 어느 부분이 실행될 때에 register에 어떠한 숫자와 일치해야 flag를 보여주는지 찾아봐야할 것 같아요
 
+아래는 처음 if문에 접근하는 곳입니다.
+
+<img width="548" height="168" alt="image" src="https://github.com/user-attachments/assets/7641e64b-e4e7-4df7-854d-1a73e6b8b54d" />
+
+여기가 
+
+<img width="708" height="712" alt="image" src="https://github.com/user-attachments/assets/fead2b7b-8135-4f8a-be35-88eaa87c6bdd" />
 
 ### 정리
 
