@@ -72,6 +72,11 @@ num에 알맞은 숫자를 넣으면 플래그가 보이는 것으로 보이는�
 <img width="548" height="168" alt="image" src="https://github.com/user-attachments/assets/7641e64b-e4e7-4df7-854d-1a73e6b8b54d" />
 
 
+아래가 if문을 지날 때 당시 register들을 확인해보았습니다. 
+
+rax는 제가 입력한 3이 출력되고 rcx에는 if문을 통과하기 위한 값인 5가 입력되어 있는것으로 보이네요
+
+그렇다면 5를 입력하게 되면 첫번째 if문을 지나 flag 28자리가 보일 것으로 보입니다. 확인해보겠습니다.
 
 <img width="708" height="712" alt="image" src="https://github.com/user-attachments/assets/fead2b7b-8135-4f8a-be35-88eaa87c6bdd" />
 
