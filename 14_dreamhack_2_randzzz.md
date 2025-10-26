@@ -71,6 +71,13 @@ num에 알맞은 숫자를 넣으면 플래그가 보이는 것으로 보이는�
 
 <img width="548" height="168" alt="image" src="https://github.com/user-attachments/assets/7641e64b-e4e7-4df7-854d-1a73e6b8b54d" />
 
+이제 main에서부터 몇 번째 자리가 if문인지 GDB를 통해서 확인해 보겠습니다.
+
+202
+
+<img width="700" height="99" alt="image" src="https://github.com/user-attachments/assets/65199a23-558a-4bcf-b0c2-ae32fa6a67ec" />
+
+
 
 아래가 if문을 지날 때 당시 register들을 확인해보았습니다. 
 
