@@ -75,6 +75,10 @@ num에 알맞은 숫자를 넣으면 플래그가 보이는 것으로 보이는�
 
 main+202에서 if 문을 지나는 것으로 보입니다. 여기에 breakpoint를 걸어보겠습니다.
 
+```
+b *main+202
+```
+
 <img width="700" height="99" alt="image" src="https://github.com/user-attachments/assets/65199a23-558a-4bcf-b0c2-ae32fa6a67ec" />
 
 
