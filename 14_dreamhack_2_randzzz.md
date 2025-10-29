@@ -119,6 +119,14 @@ flag이미지
 
 ### 정리
 
+먼저 sleep을 건너 뛰는 두 가지 방법이 있습니다.
+
+1. IDA에서 sleep 부분을 nop으로 수정
+2. GDB에서 sleep 도달하기 전에 breakpoint 후 register 값에 sleep(시간) 부분에서 시간을 1ms로 조정하는 방법
+
+이후
+
+
 
 
 ### 느낀점
