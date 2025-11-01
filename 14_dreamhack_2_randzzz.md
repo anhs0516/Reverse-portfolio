@@ -78,7 +78,8 @@ disassemble main
 
 ```
 
-main 이미지
+<img width="806" height="1243" alt="image" src="https://github.com/user-attachments/assets/fe11d0c9-ee99-4185-96ba-f7f74ca81148" />
+
 
 main+202에서 if 문을 지나는 것으로 보입니다. 여기에 breakpoint를 걸어보겠습니다.
 
@@ -98,7 +99,8 @@ rax는 제가 입력한 3이 출력되고 rcx에는 if문을 통과하기 위한
 
 그렇다면 5를 입력하게 되면 첫번째 if문을 지나 flag 28자리가 보일 것으로 보입니다. 확인해보겠습니다.
 
-28자리 이미지
+<img width="837" height="57" alt="image" src="https://github.com/user-attachments/assets/a0673e88-978f-4da9-b409-67bc4757c70a" />
+
 
 
 위와 같이 하나의 if문만 맞추니 28자리밖에 안보입니다. 
