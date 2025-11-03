@@ -126,6 +126,22 @@ flag이미지
 1. IDA에서 sleep 부분을 nop으로 수정
 2. GDB에서 sleep 도달하기 전에 breakpoint 후 register 값에 sleep(시간) 부분에서 시간을 1ms로 조정하는 방법
 
+<img width="761" height="138" alt="image" src="https://github.com/user-attachments/assets/1c134914-f25f-4e9c-ad0e-ffe3c1ebbabc" />
+
+```
+b *main+81
+```
+
+<img width="545" height="191" alt="image" src="https://github.com/user-attachments/assets/b11812ca-5421-435e-a380-541e1ad234ed" />
+
+위 sleep 시간을 1로 수정하면 sleep에서 바로 빠져나올 수 있음
+
+```
+set $eax=1
+
+```
+
+
 이후
 
 GDB를 통해 flag 값을 얻을 수 있는 두 if문에 맞는 숫자를 입력하여 flag값을 얻기
