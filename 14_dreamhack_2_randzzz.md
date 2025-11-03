@@ -109,14 +109,23 @@ rax는 제가 입력한 3이 출력되고 rcx에는 if문을 통과하기 위한
 
 그렇다면 두 번째 if문에 도달할 때의 breakpoint를 걸고 다시 register 값들을 확인하여 값을 알맞게 변경(set) 해주면 전체 flag 값을 확인할 수 있을 것으로 보입니다.
 
-두번째 if문 이미지
+<img width="667" height="94" alt="image" src="https://github.com/user-attachments/assets/f1a59cc3-678f-4af6-90e4-81b634a41da7" />
+
 
 ```
-b *main+2번째 if문
+b *main+354
 ```
 
+* 주의사항
 
-flag이미지
+eax 값을 rbp-0xc로 보내기 때문에 main+354 때 breakpoint를 걸어 eax값을 변경시켜봤자 의미가 없다 이미 rbp-0xc로 전달했고 이 값을 사용하는 것으로 보이기 때문
+
+<img width="318" height="121" alt="image" src="https://github.com/user-attachments/assets/6e5f8f05-1bde-4579-93db-5591ff12fe27" />
+
+
+
+<img width="1152" height="30" alt="image" src="https://github.com/user-attachments/assets/2cbb6ebf-4485-4cde-be89-fbf713d470af" />
+
 
 
 ### 정리
