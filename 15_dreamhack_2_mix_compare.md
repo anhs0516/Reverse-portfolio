@@ -9,6 +9,10 @@
 
 # 분석
 
+우선 PEView를 통해 ELF 파일임을 확인했습니다.
+
+<img width="1449" height="284" alt="image" src="https://github.com/user-attachments/assets/dd90c541-4aaa-4c12-8734-657e2860a697" />
+
 
 # 문제풀이
 
