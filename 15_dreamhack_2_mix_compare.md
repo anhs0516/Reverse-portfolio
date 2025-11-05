@@ -31,6 +31,13 @@ Input에 5라는 숫자를 하나 적으니 rax 값에 1이 들어간걸 확인�
 
 <img width="543" height="334" alt="image" src="https://github.com/user-attachments/assets/53b62b0a-1118-4c19-b03f-3441ef158d69" />
 
+그리고 한 자리만을 넣으니 아래와 같이 "Try Again" 이라는 결과값이 나왔습니다.
+
+<img width="160" height="33" alt="image" src="https://github.com/user-attachments/assets/29e64f20-01d5-4ab8-b85a-901cf68f9034" />
+
+그래서 64자리 숫자를 채워보았더니 "good"이라는 결과값을 찾을 수 있었습니다.
+
+<img width="644" height="839" alt="image" src="https://github.com/user-attachments/assets/6ac87e10-abde-47e2-821e-5f3beb4d4052" />
 
 
 # 문제풀이
