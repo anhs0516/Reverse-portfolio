@@ -45,7 +45,29 @@ check 함수를 자세히 확인해보면 아래와 같은데 와..... 엄청나
 
 <img width="366" height="927" alt="image" src="https://github.com/user-attachments/assets/fb3449f8-c8d4-4416-8198-b84cbfe21a43" />
 
+0~15까지는 아래 조건들을 따르고
+
 <img width="336" height="424" alt="image" src="https://github.com/user-attachments/assets/a024b94d-3d8a-45b0-b5af-2bbe378acac8" />
+
+16~25까지는 아래 조건
+
+<img width="374" height="179" alt="image" src="https://github.com/user-attachments/assets/5b524e1f-0570-4ab6-bb0c-862c5a2f830d" />
+
+26~35 
+
+<img width="355" height="172" alt="image" src="https://github.com/user-attachments/assets/e9d89308-8021-42d7-a1eb-0c35af7e30d2" />
+
+36~45
+
+<img width="356" height="170" alt="image" src="https://github.com/user-attachments/assets/af871009-a120-401c-83df-75685244a1a9" />
+
+46~55
+
+<img width="346" height="175" alt="image" src="https://github.com/user-attachments/assets/73181a59-609b-4e5f-bc84-e546b8fda5b3" />
+
+56~63
+
+<img width="400" height="174" alt="image" src="https://github.com/user-attachments/assets/69330dce-187b-45bb-bee8-69d196a7cff0" />
 
 
 리버싱을 해야하니까 뒤에서부터 풀어가면 될 것 같습니다.
