@@ -45,6 +45,7 @@ check 함수를 자세히 확인해보면 아래와 같은데 와..... 엄청나
 
 <img width="366" height="927" alt="image" src="https://github.com/user-attachments/assets/fb3449f8-c8d4-4416-8198-b84cbfe21a43" />
 
+리버싱을 해야하니까 뒤에서부터 풀어가면 될 것 같습니다.
 
 # 문제풀이
 
