@@ -76,6 +76,21 @@ check 함수를 자세히 확인해보면 아래와 같은데 와..... 엄청나
 
 # 문제풀이
 
+```code
+def to_int(strings):
+    return int.from_bytes(bytes.fromhex(strings), "little")
+    
+
+
+with open("D:\\2025\\Reversing_C\\dreamhack_reverse\\2_mix_compare\\result.txt", "r") as f:
+    arr = [0 for i in range(64)]
+    data = f.read().strip()
+    
+    #1~15
+    for i in range(len(data)//8):
+       print((to_int(data[i*8:(i+1)*8]) - 1) & 0xff)
+```
+
 # 정리
 
 # 느낀점
