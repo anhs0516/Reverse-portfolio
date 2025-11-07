@@ -70,7 +70,9 @@ check 함수를 자세히 확인해보면 아래와 같은데 와..... 엄청나
 <img width="400" height="174" alt="image" src="https://github.com/user-attachments/assets/69330dce-187b-45bb-bee8-69d196a7cff0" />
 
 
-리버싱을 해야하니까 뒤에서부터 풀어가면 될 것 같습니다.
+입력값이 무엇인지를 찾아야하는데 고민입니다...
+
+우선 파이썬에 각 글자마다 적용되는 조건부터 적어보겠습니다.
 
 # 문제풀이
 
