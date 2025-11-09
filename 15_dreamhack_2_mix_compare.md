@@ -86,9 +86,17 @@ with open("D:\\2025\\Reversing_C\\dreamhack_reverse\\2_mix_compare\\result.txt",
     arr = [0 for i in range(64)]
     data = f.read().strip()
     
-    #1~15
+    # #1~15
+    # for i in range(len(data)//8):
+    #    print((to_int(data[i*8:(i+1)*8]) - 1) & 0xff)
+    
     for i in range(len(data)//8):
-       print((to_int(data[i*8:(i+1)*8]) - 1) & 0xff)
+        if i == 0:
+            arr[i] = (to_int(data[i*8:(i+1)*8])- 9) & 0xff
+        elif i==1:
+            arr[i] = ~to_int(data[i*8:(i+1)*8]) & 0xff
+        elif i==2:
+            arr[i] = (to_int(data[i*8:(i+1)*8]) + 4) & 0xff
 ```
 
 # 정리
