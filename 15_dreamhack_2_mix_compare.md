@@ -77,7 +77,7 @@ check 함수를 자세히 확인해보면 아래와 같은데 와..... 엄청나
 # 문제풀이
 
 ```code
-def to_int(strings):
+def intFormat(strings):
     return int.from_bytes(bytes.fromhex(strings), "little")
     
 
@@ -88,15 +88,55 @@ with open("D:\\2025\\Reversing_C\\dreamhack_reverse\\2_mix_compare\\result.txt",
     
     # #1~15
     # for i in range(len(data)//8):
-    #    print((to_int(data[i*8:(i+1)*8]) - 1) & 0xff)
+    #    print((intFormat(data[i*8:(i+1)*8]) - 1) & 0xff)
     
     for i in range(len(data)//8):
         if i == 0:
-            arr[i] = (to_int(data[i*8:(i+1)*8])- 9) & 0xff
+            arr[i] = (intFormat(data[i*8:(i+1)*8])- 9) & 0xff
         elif i==1:
-            arr[i] = ~to_int(data[i*8:(i+1)*8]) & 0xff
+            arr[i] = ~intFormat(data[i*8:(i+1)*8]) & 0xff
         elif i==2:
-            arr[i] = (to_int(data[i*8:(i+1)*8]) + 4) & 0xff
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) + 4) & 0xff
+        elif i==3:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) // 2) & 0xff
+        elif i==4:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) -  34) & 0xff
+        elif i==5:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) - 40 ) & 0xff
+        elif i==6:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) + 40 ) & 0xff
+        elif i==7:  
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) // 3) & 0xff
+        elif i==8:
+            arr[i] = ~intFormat(data[i*8:(i+1)*8]) & 0xff
+        elif i==9:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) // 2) & 0xff
+        elif i==10:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) // 4) & 0xff
+        elif i==11:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) // 4) & 0xff            
+        elif i==12:
+            arr[i] = (19 - intFormat(data[i*8:(i+1)*8])) & 0xff
+        elif i==13:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) - 17) & 0xff
+        elif i==14:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) - 30) & 0xff
+        elif i==15:
+            arr[i] = intFormat(data[i*8:(i+1)*8]) & 0xff
+        elif i < 26:
+            arr[i] = ~(intFormat(data[i*8:(i+1)*8]) - i) & 0xff
+        elif i < 36:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) - i) & 0xff
+        elif i < 46:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) + i) & 0xff
+        elif i < 56:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) // i) & 0xff
+        else:
+            arr[i] = (intFormat(data[i*8:(i+1)*8]) + i - 100) & 0xff
+            
+            
+for i in arr:
+    print(chr(i), end ="")
 ```
 
 # 정리
