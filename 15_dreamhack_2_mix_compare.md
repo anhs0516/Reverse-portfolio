@@ -76,6 +76,8 @@ check 함수를 자세히 확인해보면 아래와 같은데 와..... 엄청나
 
 # 문제풀이
 
+역연산을 하기 전에 입력되어야하는 값들인 리스트를 추출해야 합니다. 
+
 ```code
 def intFormat(strings):
     return int.from_bytes(bytes.fromhex(strings), "little")
