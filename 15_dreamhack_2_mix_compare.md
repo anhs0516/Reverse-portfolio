@@ -78,6 +78,9 @@ check 함수를 자세히 확인해보면 아래와 같은데 와..... 엄청나
 
 역연산을 하기 전에 입력되어야하는 값들인 리스트를 추출해야 합니다. 
 
+result.txt파일을 만들어 이 데이터를 읽게하고 조건들을 역연산하여 64글자의 입력값을 찾아내보겠습니다.
+
+
 ```code
 def intFormat(strings):
     return int.from_bytes(bytes.fromhex(strings), "little")
