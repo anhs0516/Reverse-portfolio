@@ -82,6 +82,16 @@ result.txt파일을 만들어 이 데이터를 읽게하고 조건들을 역연�
 
 result.txt에는 512글자가 들어가있고 이를 hex 4바이트 (ex 00 00 00 39)마다 한 글자가 되어 총 64글자가 나오게 될 것으로 보입니다.
 
+우선 조건들을 보았을 때, result 혹은 dword_**** 가 보입니다.
+
+<img width="333" height="401" alt="image" src="https://github.com/user-attachments/assets/d88234dd-f159-47e3-8de3-5e81da777f7d" />
+
+
+이 조건들이 이루어지면 값이 어떻게 되는지 나타내는 것으로 우리는 이 데이터를 역연산하면 flag 값들이 나올 것으로 판단됩니다.
+
+<img width="883" height="846" alt="image" src="https://github.com/user-attachments/assets/8ecd25e3-67a9-4893-a119-96af53e8c3af" />
+
+
 
 ```code
 def intFormat(strings):
@@ -138,13 +148,15 @@ with open("D:\\2025\\Reversing_C\\dreamhack_reverse\\2_mix_compare\\result.txt",
             arr[i] = (intFormat(data[i*8:(i+1)*8]) + i) & 0xff
         elif i < 56:
             arr[i] = (intFormat(data[i*8:(i+1)*8]) // i) & 0xff
-        else:
+        elif i < 65:
             arr[i] = (intFormat(data[i*8:(i+1)*8]) + i - 100) & 0xff
             
             
 for i in arr:
     print(chr(i), end ="")
 ```
+
+
 
 # 정리
 
