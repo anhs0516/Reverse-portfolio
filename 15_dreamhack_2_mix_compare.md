@@ -156,6 +156,9 @@ for i in arr:
     print(chr(i), end ="")
 ```
 
+데이터를 찾은 후 위 역연산을 실행하게 되면 아래와 같이 64글자의 flag 값을 얻을 수 있습니다.
+
+<img width="597" height="22" alt="image" src="https://github.com/user-attachments/assets/f5cef837-0dc5-49e0-807e-d1b447ab64ab" />
 
 
 # 정리
